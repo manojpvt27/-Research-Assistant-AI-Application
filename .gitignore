@@ -1,0 +1,44 @@
+# Virtual Environment
+backend/venv/
+venv/
+.venv/
+ENV/
+env/
+
+# Node modules
+frontend/node_modules/
+node_modules/
+
+# Local databases and vector stores
+backend/research.db
+research.db
+backend/chroma_db/
+chroma_db/
+
+# Local exports
+backend/exports/
+exports/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vite / Frontend build artifacts
+frontend/dist/
+dist/
+.vite/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

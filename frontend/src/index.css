@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0F0F1A;
+    color: #F1F5F9;
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+/* Custom premium glows and design features */
+.glow-purple-cyan {
+  box-shadow: 0 0 25px -5px rgba(124, 58, 237, 0.2), 0 0 15px -5px rgba(6, 182, 212, 0.15);
+}
+
+.glow-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.3), 0 1px 1px 0 rgba(6, 182, 212, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #A78BFA 0%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-premium {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+}
+
+.bg-gradient-hero {
+  background: radial-gradient(circle at top, rgba(124, 58, 237, 0.15) 0%, rgba(15, 15, 26, 0) 70%);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0F1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1A2E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* Animated scanner line */
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.scanner-line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #06B6D4, transparent);
+  animation: scan 4s infinite linear;
+}
